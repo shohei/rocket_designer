@@ -1,2 +1,2 @@
 #/bin/sh
-pyuic5 -x main.ui -o ui.py
+pyuic5 -x rocket_designer.ui -o ui.py
