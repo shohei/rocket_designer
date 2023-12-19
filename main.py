@@ -4,11 +4,10 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLa
 from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence
 import math
-
-g = 9.8 #m/s^2
-validator = QRegExpValidator(QRegExp(r'[0-9].+'))
+import config
 
 def runMission(ui):
+    g = config.g
     h = float(ui.le_apogee.text())
     m0 = float(ui.le_m0.text())
     Isp = float(ui.le_isp.text())
@@ -30,6 +29,7 @@ def setupHandlers(ui):
     ui.tabWidget.currentChanged.connect(lambda: tabSwitchedEvent(ui))
 
 def setupValidators(ui):
+    validator = QRegExpValidator(QRegExp(r'[0-9].+'))
     ui.le_apogee.setValidator(validator)
     ui.le_isp.setValidator(validator)
     ui.le_m0.setValidator(validator)
