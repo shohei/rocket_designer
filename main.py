@@ -1,6 +1,6 @@
 import os, sys
-from ui import Ui_MainWindow
-from about_ui import Ui_Form as Ui_About
+from ui import Ui_RocketDesigner
+from about_ui import Ui_AboutForm 
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout, QShortcut, QMainWindow)
 from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
@@ -30,22 +30,27 @@ def setupShortcut(ui):
 
 def loadImages(ui_about):
     path = os.path.dirname(os.path.abspath(__file__))
-    ui_about.logo_label.setPixmap(QPixmap(os.path.join(path, '../image/logo.jpg')))
+    ui_about.logo_label.setPixmap(QPixmap(os.path.join(path, './image/logo.jpg')))
+
+def setupMenu(ui, AboutForm):
+    ui.actionAbout.triggered.connect(lambda: AboutForm.show())
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     #Init Main Window UI
-    MainWindow = QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    # menu = ui.menubar
-    # menu.setNativeMenuBar(False)
+    RocketDesigner = QMainWindow()
+    ui = Ui_RocketDesigner()
+    ui.setupUi(RocketDesigner)
+
+    # Show menubar on main window
+    menu = ui.menuBar
+    menu.setNativeMenuBar(False)
 
     #Init About Form UI
-    ui_about = Ui_About()
-    aboutForm = QWidget()
-    ui_about.setupUi(aboutForm)
+    ui_about = Ui_AboutForm()
+    AboutForm = QWidget()
+    ui_about.setupUi(AboutForm)
     loadImages(ui_about)
 
     mission.initialize(ui) 
@@ -56,7 +61,9 @@ if __name__ == "__main__":
     ignitor.initialize(ui)
     injector.initialize(ui)
     grain.initialize(ui)
-    setupShortcut(ui)
 
-    MainWindow.show()
+    setupShortcut(ui)
+    setupMenu(ui, AboutForm)
+
+    RocketDesigner.show()    
     sys.exit(app.exec_())

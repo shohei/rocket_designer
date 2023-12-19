@@ -11,52 +11,49 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
-        self.label = QtWidgets.QLabel(Form)
+class Ui_AboutForm(object):
+    def setupUi(self, AboutForm):
+        AboutForm.setObjectName("AboutForm")
+        AboutForm.resize(400, 300)
+        AboutForm.setAcceptDrops(False)
+        self.label = QtWidgets.QLabel(AboutForm)
         self.label.setGeometry(QtCore.QRect(170, 10, 181, 61))
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setGeometry(QtCore.QRect(170, 80, 191, 16))
+        self.label_2 = QtWidgets.QLabel(AboutForm)
+        self.label_2.setGeometry(QtCore.QRect(176, 80, 191, 16))
         self.label_2.setObjectName("label_2")
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(270, 250, 113, 32))
-        self.pushButton.setObjectName("pushButton")
-        self.textBrowser = QtWidgets.QTextBrowser(Form)
-        self.textBrowser.setGeometry(QtCore.QRect(90, 130, 241, 111))
+        self.textBrowser = QtWidgets.QTextBrowser(AboutForm)
+        self.textBrowser.setGeometry(QtCore.QRect(90, 140, 241, 141))
         self.textBrowser.setObjectName("textBrowser")
-        self.logo_label = QtWidgets.QLabel(Form)
-        self.logo_label.setGeometry(QtCore.QRect(30, 20, 100, 100))
+        self.logo_label = QtWidgets.QLabel(AboutForm)
+        self.logo_label.setGeometry(QtCore.QRect(60, 20, 100, 100))
         self.logo_label.setAlignment(QtCore.Qt.AlignCenter)
         self.logo_label.setObjectName("logo_label")
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(AboutForm)
+        QtCore.QMetaObject.connectSlotsByName(AboutForm)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, AboutForm):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:24pt;\">Rocket Designer</span></p></body></html>"))
-        self.label_2.setText(_translate("Form", "Copyright ©2023 Shohei Aoki"))
-        self.pushButton.setText(_translate("Form", "Close"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        AboutForm.setWindowTitle(_translate("AboutForm", "About"))
+        self.label.setText(_translate("AboutForm", "<html><head/><body><p><span style=\" font-size:24pt;\">Rocket Designer</span></p></body></html>"))
+        self.label_2.setText(_translate("AboutForm", "Copyright ©2023 Shohei Aoki"))
+        self.textBrowser.setHtml(_translate("AboutForm", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Rocket designer is using the following open source software</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">- RocketCEA</p></body></html>"))
-        self.logo_label.setText(_translate("Form", "Logo"))
+        self.logo_label.setText(_translate("AboutForm", "Logo"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    AboutForm = QtWidgets.QWidget()
+    ui = Ui_AboutForm()
+    ui.setupUi(AboutForm)
+    AboutForm.show()
     sys.exit(app.exec_())

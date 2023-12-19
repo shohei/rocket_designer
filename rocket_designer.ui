@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>RocketDesigner</class>
+ <widget class="QMainWindow" name="RocketDesigner">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -261,6 +261,9 @@
       <property name="textFormat">
        <enum>Qt::AutoText</enum>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
       <property name="wordWrap">
        <bool>false</bool>
       </property>
@@ -303,7 +306,8 @@
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -317,25 +321,30 @@
      <string>File</string>
     </property>
     <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
    </widget>
-   <widget class="QMenu" name="menuAbout">
+   <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>About</string>
+     <string>Help</string>
     </property>
-    <addaction name="actionAbout_the_software"/>
+    <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuAbout"/>
+   <addaction name="menuHelp"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
   <action name="actionOpen">
    <property name="text">
     <string>Open</string>
    </property>
   </action>
-  <action name="actionAbout_the_software">
+  <action name="actionSave">
    <property name="text">
-    <string>About Rocket designer</string>
+    <string>Save</string>
    </property>
   </action>
  </widget>
