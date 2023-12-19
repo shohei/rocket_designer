@@ -8,24 +8,30 @@ from components import *
 
 def run(ui):
     g = config.g
-    h = float(ui.le_apogee.text())
+    h = float(ui.le_apogee.text())*1000
     m0 = float(ui.le_m0.text())
     Isp = float(ui.le_isp.text())
     burntime = float(ui.le_burntime.text())
 
     deltaV = math.sqrt(2*g*h)
-    I = m0*deltaV 
+    I = m0*deltaV
     MR = math.exp(deltaV/(g*Isp))
     mp= (MR-1)/MR*m0
     avg_thrust = I/burntime
     ui.le_deltav.setText("{:.2f}".format((deltaV)))
-    ui.le_impulse.setText("{:.2f}".format((I)))
+    ui.le_impulse.setText("{:.2f}".format((I/1000.0)))
     ui.le_mr.setText("{:.2f}".format((MR)))
-    ui.le_thrust.setText("{:.2f}".format((avg_thrust)))
+    ui.le_thrust.setText("{:.2f}".format((avg_thrust/1000.0)))
     ui.le_mp.setText("{:.2f}".format((mp)))
 
 def setupHandlers(ui):
     ui.runMissionButton.clicked.connect(lambda: run(ui))
+    ui.nakuja_n3_button.clicked.connect(lambda: initializeNakujaN3parameters(ui))
+    ui.usc_traveler4_button.clicked.connect(lambda: initializeUSCTraveler4parameters(ui))
+    ui.jaxa_ss520_button.clicked.connect(lambda: initializeJAXASS520parameters(ui))
+    ui.nakuja_liquid1_button.clicked.connect(lambda: initializeNakujaLiquid1parameters(ui))
+    ui.jaxa_h3_button.clicked.connect(lambda: initializeJAXAH3parameters(ui))
+    ui.spacex_falcon9_button.clicked.connect(lambda: initializeSpaceXFalcon9parameters(ui))
     ui.tabWidget.currentChanged.connect(lambda: tabSwitchedEvent(ui))
 
 def tabSwitchedEvent(ui):
@@ -45,11 +51,41 @@ def setupValidators(ui):
     ui.le_thrust.setValidator(validator)
     ui.le_mp.setValidator(validator)
 
-def initializeN3parameters(ui):
-    ui.le_apogee.setText('2000.0')
+def initializeNakujaN3parameters(ui):
+    ui.le_apogee.setText('2.0')
     ui.le_isp.setText('110.0')
     ui.le_m0.setText('10.0')
     ui.le_burntime.setText('1.8')
+
+def initializeUSCTraveler4parameters(ui):
+    ui.le_apogee.setText('103.5714')
+    ui.le_isp.setText('N/A')
+    ui.le_m0.setText('N/A')
+    ui.le_burntime.setText('N/A')
+
+def initializeJAXASS520parameters(ui):
+    ui.le_apogee.setText('800.0')
+    ui.le_isp.setText('282.6')
+    ui.le_m0.setText('2740.0')
+    ui.le_burntime.setText('25.6')
+
+def initializeNakujaLiquid1parameters(ui):
+    ui.le_apogee.setText('N/A')
+    ui.le_isp.setText('N/A')
+    ui.le_m0.setText('N/A')
+    ui.le_burntime.setText('N/A')
+
+def initializeJAXAH3parameters(ui):
+    ui.le_apogee.setText('N/A')
+    ui.le_isp.setText('N/A')
+    ui.le_m0.setText('N/A')
+    ui.le_burntime.setText('N/A')
+
+def initializeSpaceXFalcon9parameters(ui):
+    ui.le_apogee.setText('N/A')
+    ui.le_isp.setText('N/A')
+    ui.le_m0.setText('N/A')
+    ui.le_burntime.setText('N/A')
 
 # ### Use this function To attach files to the exe file (eg - png, txt, jpg etc) using pyinstaller
 def resource_path(relative_path):
@@ -67,5 +103,5 @@ def loadImages(ui):
 def initialize(ui):
     setupHandlers(ui)
     setupValidators(ui)
-    loadImages(ui)
-    initializeN3parameters(ui)
+    # loadImages(ui)
+    initializeNakujaN3parameters(ui)

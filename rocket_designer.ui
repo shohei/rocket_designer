@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>812</width>
+    <width>828</width>
     <height>657</height>
    </rect>
   </property>
@@ -22,7 +22,7 @@
      <rect>
       <x>0</x>
       <y>10</y>
-      <width>821</width>
+      <width>831</width>
       <height>621</height>
      </rect>
     </property>
@@ -77,7 +77,7 @@
            <enum>Qt::LeftToRight</enum>
           </property>
           <property name="text">
-           <string>Apogee [m]</string>
+           <string>Apogee [km]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -203,7 +203,7 @@
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>Total impulse I [N•s]</string>
+           <string>Total impulse I [kN•s]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -233,7 +233,7 @@
         <item>
          <widget class="QLabel" name="label_7">
           <property name="text">
-           <string>Avg. Thrust [N]</string>
+           <string>Avg. Thrust [kN]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -243,30 +243,97 @@
        </layout>
       </widget>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QGroupBox" name="groupBox_3">
       <property name="geometry">
        <rect>
         <x>460</x>
         <y>40</y>
-        <width>311</width>
+        <width>161</width>
         <height>201</height>
        </rect>
       </property>
-      <property name="lineWidth">
-       <number>0</number>
+      <property name="title">
+       <string>Solid propellant rocket</string>
       </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rocket image&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <widget class="QWidget" name="verticalLayoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>138</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QPushButton" name="nakuja_n3_button">
+          <property name="text">
+           <string>Nakuja N3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="usc_traveler4_button">
+          <property name="text">
+           <string>USC Traveler IV</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="jaxa_ss520_button">
+          <property name="text">
+           <string>JAXA SS-520</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>40</y>
+        <width>171</width>
+        <height>201</height>
+       </rect>
       </property>
-      <property name="textFormat">
-       <enum>Qt::AutoText</enum>
+      <property name="title">
+       <string>Liquid propellant rocket</string>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="wordWrap">
-       <bool>false</bool>
-      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>148</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QPushButton" name="nakuja_liquid1_button">
+          <property name="text">
+           <string>Nakuja Liquid-1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="jaxa_h3_button">
+          <property name="text">
+           <string>JAXA H3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="spacex_falcon9_button">
+          <property name="text">
+           <string>Space X Falcon 9</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="thermoTab">
@@ -322,7 +389,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>812</width>
+     <width>828</width>
      <height>24</height>
     </rect>
    </property>
