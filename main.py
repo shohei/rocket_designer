@@ -1,8 +1,8 @@
-import sys
+import os, sys
 from ui import Ui_Form
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout, QShortcut)
 from PyQt5.QtCore import Qt,QRegExp
-from PyQt5.QtGui import QRegExpValidator, QKeySequence
+from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
 import math
 import config
 
@@ -64,10 +64,23 @@ def runEvent(ui):
     elif tabIndex == 4:
         pass
 
+def loadImages(ui):
+    # ui.label.setPixmap(QPixmap(resource_path("image/h3.jpg")))
+    ui.label.setPixmap(QPixmap("image/h3.jpg"))
+
 def setupShortcut(ui):
     shortcut = QKeySequence(Qt.CTRL + Qt.Key_R)
     ui.shortcut = QShortcut(shortcut, ui.tabWidget)
     ui.shortcut.activated.connect(lambda: runEvent(ui))
+
+# ### Use this function To attach files to the exe file (eg - png, txt, jpg etc) using pyinstaller
+# def resource_path(relative_path):
+#     """ Get absolute path to resource, works for dev and for PyInstaller """
+#     if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+#         base_path = sys._MEIPASS
+#     else:
+#         base_path = os.path.abspath(".")
+#     return os.path.join(base_path, relative_path)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
@@ -76,6 +89,7 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     setupHandlers(ui)
     setupValidators(ui)
+    loadImages(ui)
     initializeN3parameters(ui)
     setupShortcut(ui)
     Form.show()

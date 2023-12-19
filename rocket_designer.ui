@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>823</width>
-    <height>596</height>
+    <width>820</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -236,6 +236,28 @@
       </layout>
      </widget>
     </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>40</y>
+       <width>311</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rocket image&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="thermoTab">
     <attribute name="title">
@@ -247,14 +269,24 @@
      <string>Nozzle</string>
     </attribute>
    </widget>
+   <widget class="QWidget" name="feedTab">
+    <attribute name="title">
+     <string>Feed system</string>
+    </attribute>
+   </widget>
    <widget class="QWidget" name="chamberTab">
     <attribute name="title">
      <string>Chamber</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="feedTab">
+   <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>Feed system</string>
+     <string>Ignitor</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Injector</string>
     </attribute>
    </widget>
   </widget>
