@@ -1,5 +1,4 @@
 import os, sys
-from ui import Ui_Form
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout, QShortcut)
 from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
@@ -62,8 +61,6 @@ def resource_path(relative_path):
 
 def loadImages(ui):
     path = os.path.dirname(os.path.abspath(__file__))
-    # ui.label.setPixmap(QPixmap(resource_path("../../image/h3.jpg")))
-    # ui.label.setPixmap(QPixmap("../image/h3.jpg"))
     ui.label.setPixmap(QPixmap(os.path.join(path, '../image/h3.jpg')))
 
 def initialize(ui):
