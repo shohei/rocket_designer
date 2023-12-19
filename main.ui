@@ -23,11 +23,11 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>Tab 1</string>
+     <string>Mission</string>
     </attribute>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
@@ -45,17 +45,22 @@
    </widget>
    <widget class="QWidget" name="tab_4">
     <attribute name="title">
-     <string>Page</string>
+     <string>Thermochemical</string>
     </attribute>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
-     <string>Page</string>
+     <string>Nozzle</string>
     </attribute>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
-     <string>Tab 2</string>
+     <string>Chamber</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Feed system</string>
     </attribute>
    </widget>
   </widget>
