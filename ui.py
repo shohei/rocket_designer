@@ -131,6 +131,9 @@ class Ui_RocketDesigner(object):
         self.tabWidget.addTab(self.missionTab, "")
         self.thermoTab = QtWidgets.QWidget()
         self.thermoTab.setObjectName("thermoTab")
+        self.widget = MplWidget(self.thermoTab)
+        self.widget.setGeometry(QtCore.QRect(90, 100, 271, 271))
+        self.widget.setObjectName("widget")
         self.tabWidget.addTab(self.thermoTab, "")
         self.nozzleTab = QtWidgets.QWidget()
         self.nozzleTab.setObjectName("nozzleTab")
@@ -175,12 +178,12 @@ class Ui_RocketDesigner(object):
         self.menuBar.addAction(self.menuHelp.menuAction())
 
         self.retranslateUi(RocketDesigner)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(RocketDesigner)
 
     def retranslateUi(self, RocketDesigner):
         _translate = QtCore.QCoreApplication.translate
-        RocketDesigner.setWindowTitle(_translate("RocketDesigner", "MainWindow"))
+        RocketDesigner.setWindowTitle(_translate("RocketDesigner", "Rocket Designer"))
         self.runMissionButton.setText(_translate("RocketDesigner", "Calculate"))
         self.groupBox.setTitle(_translate("RocketDesigner", "Input"))
         self.label_9.setText(_translate("RocketDesigner", "Apogee [m]"))
@@ -207,6 +210,7 @@ class Ui_RocketDesigner(object):
         self.actionAbout.setText(_translate("RocketDesigner", "About"))
         self.actionOpen.setText(_translate("RocketDesigner", "Open"))
         self.actionSave.setText(_translate("RocketDesigner", "Save"))
+from mplwidget import MplWidget
 
 
 if __name__ == "__main__":

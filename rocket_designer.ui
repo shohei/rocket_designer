@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Rocket Designer</string>
   </property>
   <property name="documentMode">
    <bool>false</bool>
@@ -273,6 +273,16 @@
      <attribute name="title">
       <string>Thermochemical</string>
      </attribute>
+     <widget class="MplWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>100</y>
+        <width>271</width>
+        <height>271</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="nozzleTab">
      <attribute name="title">
@@ -348,6 +358,14 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MplWidget</class>
+   <extends>QWidget</extends>
+   <header>mplwidget.py</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

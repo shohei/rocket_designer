@@ -8,9 +8,9 @@ import math
 import config
 from components import mission, thermochemical, nozzle, chamber, feed, injector, ignitor, grain
 import pdb
+import qdarktheme
 
 def runButtonEvent(ui):
-    print('run')
     tabIndex = ui.tabWidget.currentIndex()
     if tabIndex == 0:
         mission.run(ui)
@@ -37,6 +37,7 @@ def setupMenu(ui, AboutForm):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    qdarktheme.setup_theme("light")
 
     #Init Main Window UI
     RocketDesigner = QMainWindow()

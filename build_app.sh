@@ -1,2 +1,2 @@
 #/bin/sh
-pyinstaller --windowed ui.py
+pyinstaller --windowed main.py
