@@ -25,15 +25,15 @@
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="tab">
+   <widget class="QWidget" name="missionTab">
     <attribute name="title">
      <string>Mission</string>
     </attribute>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="runMissionButton">
      <property name="geometry">
       <rect>
-       <x>610</x>
-       <y>490</y>
+       <x>650</x>
+       <y>510</y>
        <width>113</width>
        <height>32</height>
       </rect>
@@ -140,7 +140,7 @@
        <x>60</x>
        <y>250</y>
        <width>371</width>
-       <height>201</height>
+       <height>251</height>
       </rect>
      </property>
      <property name="title">
@@ -152,7 +152,7 @@
         <x>190</x>
         <y>30</y>
         <width>160</width>
-        <height>151</height>
+        <height>191</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -166,6 +166,9 @@
         <widget class="QLineEdit" name="le_mr"/>
        </item>
        <item>
+        <widget class="QLineEdit" name="le_mp"/>
+       </item>
+       <item>
         <widget class="QLineEdit" name="le_thrust"/>
        </item>
       </layout>
@@ -176,7 +179,7 @@
         <x>19</x>
         <y>30</y>
         <width>161</width>
-        <height>151</height>
+        <height>191</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -211,6 +214,16 @@
         </widget>
        </item>
        <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Propellant mass [kg]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label_7">
          <property name="text">
           <string>Avg. Thrust [N]</string>
@@ -224,22 +237,22 @@
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_4">
+   <widget class="QWidget" name="thermoTab">
     <attribute name="title">
      <string>Thermochemical</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_3">
+   <widget class="QWidget" name="nozzleTab">
     <attribute name="title">
      <string>Nozzle</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_2">
+   <widget class="QWidget" name="chamberTab">
     <attribute name="title">
      <string>Chamber</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_5">
+   <widget class="QWidget" name="feedTab">
     <attribute name="title">
      <string>Feed system</string>
     </attribute>
