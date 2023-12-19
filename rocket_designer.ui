@@ -48,7 +48,7 @@
        <x>39</x>
        <y>90</y>
        <width>161</width>
-       <height>191</height>
+       <height>271</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -59,6 +59,26 @@
         </property>
         <property name="text">
          <string>Apogee [m]</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Isp [s]</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Initial mass [kg]</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -103,12 +123,18 @@
        <x>210</x>
        <y>90</y>
        <width>160</width>
-       <height>191</height>
+       <height>271</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QLineEdit" name="le_apogee"/>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_isp"/>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_m0"/>
       </item>
       <item>
        <widget class="QLineEdit" name="le_deltav"/>
