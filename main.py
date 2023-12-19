@@ -2,16 +2,20 @@ import sys
 from ui import Ui_Form
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout)
 from PyQt5.QtCore import Qt
+import math
 
+g = 9.8 #m/s^2
 
 def calculate(ui):
     print("calculate")
-    # str = ui.le_apogee.copy()
-    # ui.le_apogee.
-    # print(str)
-    ui.le_deltav.setText("Hello World")
-    ui.le_impulse.setText("Hello World")
-    ui.le_mr.setText("Hello World")
+    h = float(ui.le_apogee.text())
+    deltaV = math.sqrt(2*g*h)
+    
+    I = m0*deltaV 
+    MR = 
+    ui.le_deltav.setText(deltaV)
+    ui.le_impulse.setText(I)
+    ui.le_mr.setText(MR)
 
 def setupHandlers(ui):
     ui.pushButton.clicked.connect(lambda: calculate(ui))
