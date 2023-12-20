@@ -35,7 +35,7 @@ def setupHandlers(ui):
     ui.tabWidget.currentChanged.connect(lambda: tabSwitchedEvent(ui))
 
 def tabSwitchedEvent(ui):
-    print(ui.tabWidget.currentIndex())
+    # print(ui.tabWidget.currentIndex())
     pass
 
 def setupValidators(ui):
