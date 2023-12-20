@@ -22,10 +22,16 @@ def runButtonEvent(ui):
     elif tabIndex == 4:
         pass
 
-def setupShortcut(ui):
-    shortcut = QKeySequence(Qt.CTRL + Qt.Key_R)
-    ui.shortcut = QShortcut(shortcut, ui.tabWidget)
+def quitEvent(MainWindow):
+    MainWindow.close()
+
+def setupShortcut(ui, MainWindow):
+    shortcutRun = QKeySequence(Qt.CTRL + Qt.Key_R)
+    ui.shortcut = QShortcut(shortcutRun, ui.tabWidget)
+    shortcutQuit = QKeySequence(Qt.CTRL + Qt.Key_W)
+    ui.shortcut = QShortcut(shortcutQuit, ui.tabWidget)
     ui.shortcut.activated.connect(lambda: runButtonEvent(ui))
+    ui.shortcut.activated.connect(lambda: quitEvent(MainWindow))
 
 def loadImages(ui_about):
     path = os.path.dirname(os.path.abspath(__file__))
@@ -62,7 +68,7 @@ if __name__ == "__main__":
     injector.initialize(ui)
     grain.initialize(ui)
 
-    setupShortcut(ui)
+    setupShortcut(ui, RocketDesigner)
     setupMenu(ui, AboutForm)
 
     RocketDesigner.show()    
