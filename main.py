@@ -18,7 +18,7 @@ def runButtonEvent(ui):
     elif tabIndex == 2:
         nozzle.run(ui)
     elif tabIndex == 3:
-        pass
+        chamber.run(ui)
     elif tabIndex == 4:
         pass
 
@@ -29,9 +29,9 @@ def setupShortcut(ui, MainWindow):
     shortcutRun = QKeySequence(Qt.CTRL + Qt.Key_R)
     ui.shortcut = QShortcut(shortcutRun, ui.tabWidget)
     shortcutQuit = QKeySequence(Qt.CTRL + Qt.Key_W)
-    ui.shortcut = QShortcut(shortcutQuit, ui.tabWidget)
+    ui.shortcut2 = QShortcut(shortcutQuit, ui.tabWidget)
     ui.shortcut.activated.connect(lambda: runButtonEvent(ui))
-    ui.shortcut.activated.connect(lambda: quitEvent(MainWindow))
+    ui.shortcut2.activated.connect(lambda: quitEvent(MainWindow))
 
 def loadImages(ui_about):
     path = os.path.dirname(os.path.abspath(__file__))

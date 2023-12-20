@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="missionTab">
      <attribute name="title">
@@ -874,9 +874,9 @@
       <widget class="QWidget" name="verticalLayoutWidget_15">
        <property name="geometry">
         <rect>
-         <x>17</x>
+         <x>20</x>
          <y>30</y>
-         <width>176</width>
+         <width>171</width>
          <height>171</height>
         </rect>
        </property>
@@ -884,7 +884,7 @@
         <item>
          <widget class="QLabel" name="label_29">
           <property name="text">
-           <string>Nozzle throat area [mm2]</string>
+           <string>Nozzle throat area At [mm2]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -897,17 +897,20 @@
         <item>
          <widget class="QLabel" name="label_31">
           <property name="text">
-           <string>Nozzle throat eiameter [mm]</string>
+           <string>Nozzle throat diameter Dt [mm]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_30">
           <property name="text">
-           <string>Expansion ratio</string>
+           <string>Expansion ratio e</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -917,7 +920,7 @@
         <item>
          <widget class="QLabel" name="label_24">
           <property name="text">
-           <string>Nozzle exit area [mm2]</string>
+           <string>Nozzle exit area Ae [mm2]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -927,7 +930,7 @@
         <item>
          <widget class="QLabel" name="label_32">
           <property name="text">
-           <string>Nozzle exit diameter [mm]</string>
+           <string>Nozzle exit diameter De [mm]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -968,11 +971,11 @@
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="feedTab">
+    <widget class="QWidget" name="chamberTab">
      <attribute name="title">
-      <string>Feed system</string>
+      <string>Chamber</string>
      </attribute>
-     <widget class="QPushButton" name="runMissionButton_3">
+     <widget class="QPushButton" name="runChamberButton">
       <property name="geometry">
        <rect>
         <x>650</x>
@@ -985,12 +988,182 @@
        <string>Calculate</string>
       </property>
      </widget>
+     <widget class="QGroupBox" name="groupBox_9">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>70</y>
+        <width>301</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_17">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>151</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_19">
+        <item>
+         <widget class="QLabel" name="label_33">
+          <property name="text">
+           <string>Characteristic Chamber Length L* [cm]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_37">
+          <property name="text">
+           <string>Nozzle throat area At [mm^2]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_19">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>30</y>
+         <width>121</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_21">
+        <item>
+         <widget class="QLineEdit" name="le_lstar"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_at_2"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_10">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>260</y>
+        <width>301</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_18">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>151</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_20">
+        <item>
+         <widget class="QLabel" name="label_34">
+          <property name="text">
+           <string>Chamber Volume Vc [cm^2]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_36">
+          <property name="text">
+           <string>Chamber diameter Dc [mm]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_35">
+          <property name="text">
+           <string>Chamber Length Lc [cm]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_20">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>30</y>
+         <width>121</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_22">
+        <item>
+         <widget class="QLineEdit" name="le_vc"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_dc"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_lc"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="lbl_lstar">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>60</y>
+        <width>331</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>L* table figure</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="chamberTab">
+    <widget class="QWidget" name="feedTab">
      <attribute name="title">
-      <string>Chamber</string>
+      <string>Feed system</string>
      </attribute>
-     <widget class="QPushButton" name="runMissionButton_4">
+     <widget class="QPushButton" name="runMissionButton_3">
       <property name="geometry">
        <rect>
         <x>650</x>
