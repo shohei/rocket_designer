@@ -16,7 +16,7 @@ def runButtonEvent(ui):
     elif tabIndex == 1:
         thermochemical.run(ui)
     elif tabIndex == 2:
-        pass
+        nozzle.run(ui)
     elif tabIndex == 3:
         pass
     elif tabIndex == 4:
