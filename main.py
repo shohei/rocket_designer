@@ -7,7 +7,6 @@ from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
 import math
 import config
 from components import mission, thermochemical, nozzle, chamber, feed, injector, ignitor, grain
-import pdb
 import qdarktheme
 
 def runButtonEvent(ui):

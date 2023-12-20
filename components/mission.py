@@ -18,11 +18,13 @@ def run(ui):
     MR = math.exp(deltaV/(g*Isp))
     mp= (MR-1)/MR*m0
     avg_thrust = I/burntime
+    mass_flow_rate = mp/burntime
     ui.le_deltav.setText("{:.2f}".format((deltaV)))
     ui.le_impulse.setText("{:.2f}".format((I/1000.0)))
     ui.le_mr.setText("{:.2f}".format((MR)))
     ui.le_thrust.setText("{:.2f}".format((avg_thrust/1000.0)))
     ui.le_mp.setText("{:.2f}".format((mp)))
+    ui.le_mdot.setText("{:.2f}".format((mass_flow_rate)))
 
 def setupHandlers(ui):
     ui.runMissionButton.clicked.connect(lambda: run(ui))
@@ -105,3 +107,4 @@ def initialize(ui):
     setupValidators(ui)
     # loadImages(ui)
     initializeNakujaN3parameters(ui)
+    run(ui)

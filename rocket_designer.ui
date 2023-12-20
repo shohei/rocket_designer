@@ -49,9 +49,9 @@
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>100</x>
         <y>40</y>
-        <width>371</width>
+        <width>321</width>
         <height>181</height>
        </rect>
       </property>
@@ -64,9 +64,9 @@
       <widget class="QWidget" name="verticalLayoutWidget_3">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>10</x>
          <y>30</y>
-         <width>161</width>
+         <width>131</width>
          <height>131</height>
         </rect>
        </property>
@@ -119,7 +119,7 @@
       <widget class="QWidget" name="verticalLayoutWidget_4">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>150</x>
          <y>30</y>
          <width>160</width>
          <height>131</height>
@@ -144,10 +144,10 @@
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>100</x>
         <y>250</y>
-        <width>371</width>
-        <height>251</height>
+        <width>331</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="title">
@@ -156,10 +156,10 @@
       <widget class="QWidget" name="verticalLayoutWidget_2">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>160</x>
          <y>30</y>
          <width>160</width>
-         <height>191</height>
+         <height>221</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -178,15 +178,18 @@
         <item>
          <widget class="QLineEdit" name="le_thrust"/>
         </item>
+        <item>
+         <widget class="QLineEdit" name="le_mdot"/>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="verticalLayoutWidget">
        <property name="geometry">
         <rect>
-         <x>19</x>
+         <x>10</x>
          <y>30</y>
-         <width>161</width>
-         <height>191</height>
+         <width>141</width>
+         <height>221</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -240,7 +243,36 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>Propellant mass flow rate [kg/s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
        </layout>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>270</y>
+         <width>159</width>
+         <height>37</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Avg. Thrust [kN]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
       </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_3">
@@ -353,32 +385,19 @@
      <widget class="QGroupBox" name="groupBox_5">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>60</y>
-        <width>321</width>
-        <height>221</height>
+        <x>30</x>
+        <y>10</y>
+        <width>361</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="title">
        <string>Input</string>
       </property>
-      <widget class="QGroupBox" name="groupBox_6">
-       <property name="geometry">
-        <rect>
-         <x>290</x>
-         <y>220</y>
-         <width>291</width>
-         <height>221</height>
-        </rect>
-       </property>
-       <property name="title">
-        <string>GroupBox</string>
-       </property>
-      </widget>
       <widget class="QWidget" name="verticalLayoutWidget_7">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>50</x>
          <y>23</y>
          <width>171</width>
          <height>191</height>
@@ -420,10 +439,10 @@
       <widget class="QWidget" name="verticalLayoutWidget_8">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>23</y>
          <width>111</width>
-         <height>191</height>
+         <height>201</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -522,58 +541,42 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_12"/>
       </widget>
-      <widget class="QLabel" name="label_12">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>200</y>
-         <width>169</width>
-         <height>58</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Chamber pressure [MPa]</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_7">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>300</y>
-        <width>321</width>
-        <height>221</height>
+        <x>30</x>
+        <y>250</y>
+        <width>361</width>
+        <height>291</height>
        </rect>
       </property>
       <property name="title">
        <string>Output</string>
       </property>
-      <widget class="QGroupBox" name="groupBox_8">
-       <property name="geometry">
-        <rect>
-         <x>290</x>
-         <y>220</y>
-         <width>291</width>
-         <height>221</height>
-        </rect>
-       </property>
-       <property name="title">
-        <string>GroupBox</string>
-       </property>
-      </widget>
       <widget class="QWidget" name="verticalLayoutWidget_11">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>30</x>
          <y>24</y>
-         <width>171</width>
-         <height>190</height>
+         <width>191</width>
+         <height>251</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>Max Isp vac. [s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QLabel" name="label_13">
           <property name="text">
@@ -582,6 +585,65 @@
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Flame temperature [K]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Gamma</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Molecular weight</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>Oxidizer mass flow rate [kg/s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>Fuel mass flow rate [kg/s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
        </layout>
@@ -589,15 +651,61 @@
       <widget class="QWidget" name="verticalLayoutWidget_12">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>24</y>
          <width>111</width>
-         <height>190</height>
+         <height>251</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_14">
         <item>
-         <widget class="QLineEdit" name="le_opt_mr"/>
+         <widget class="QLineEdit" name="le_max_isp">
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_opt_mr">
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_aft">
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_gamma">
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_M">
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_mdot_ox">
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_mdot_fuel">
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
