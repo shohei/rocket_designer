@@ -46,6 +46,10 @@ def initializeVariables(ui):
 def run(ui):
     computeCstar(ui)
 
+def setupHandlers(ui):
+    ui.runThermalButton.clicked.connect(lambda: run(ui))
+
 def initialize(ui):
     initializeVariables(ui)
+    setupHandlers(ui)
     computeCstar(ui)

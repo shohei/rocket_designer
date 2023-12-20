@@ -602,7 +602,7 @@
        </layout>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="runThermalButton">
       <property name="geometry">
        <rect>
         <x>650</x>
