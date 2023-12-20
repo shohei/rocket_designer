@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="missionTab">
      <attribute name="title">
@@ -745,7 +745,7 @@
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>50</y>
+        <y>20</y>
         <width>351</width>
         <height>251</height>
        </rect>
@@ -863,9 +863,9 @@
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>330</y>
+        <y>290</y>
         <width>351</width>
-        <height>211</height>
+        <height>251</height>
        </rect>
       </property>
       <property name="title">
@@ -877,7 +877,7 @@
          <x>20</x>
          <y>30</y>
          <width>171</width>
-         <height>171</height>
+         <height>201</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -940,6 +940,19 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QLabel" name="label_38">
+          <property name="text">
+           <string>Conical Nozzle Length Ln [mm]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="verticalLayoutWidget_16">
@@ -948,7 +961,7 @@
          <x>202</x>
          <y>30</y>
          <width>121</width>
-         <height>171</height>
+         <height>201</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_18">
@@ -966,6 +979,9 @@
         </item>
         <item>
          <widget class="QLineEdit" name="le_de"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_ln"/>
         </item>
        </layout>
       </widget>
