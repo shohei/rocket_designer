@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="missionTab">
      <attribute name="title">
@@ -340,14 +340,279 @@
      <attribute name="title">
       <string>Thermochemical</string>
      </attribute>
-     <widget class="MplWidget" name="widget" native="true">
+     <widget class="MplWidget" name="plotWidget" native="true">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>100</y>
-        <width>271</width>
-        <height>271</height>
+        <x>410</x>
+        <y>70</y>
+        <width>341</width>
+        <height>261</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>321</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input</string>
+      </property>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>220</y>
+         <width>291</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>GroupBox</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>23</y>
+         <width>171</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Oxidizer</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Fuel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Chamber pressure [MPa]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_8">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>23</y>
+         <width>111</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QComboBox" name="cbox_ox">
+          <item>
+           <property name="text">
+            <string>GOX</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>LOX</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>AIR</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbox_fuel">
+          <item>
+           <property name="text">
+            <string>C2H5OH</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>C2H2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>C3H8</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CH4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Gasoline</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Isopropanol</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Kerosene</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>LH2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>RP1</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_pc"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_9">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>290</y>
+         <width>120</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_11"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_10">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>290</y>
+         <width>90</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_12"/>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>200</y>
+         <width>169</width>
+         <height>58</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Chamber pressure [MPa]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>300</y>
+        <width>321</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output</string>
+      </property>
+      <widget class="QGroupBox" name="groupBox_8">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>220</y>
+         <width>291</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>GroupBox</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>24</y>
+         <width>171</width>
+         <height>190</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Optimal O/F mixture ratio</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_12">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>24</y>
+         <width>111</width>
+         <height>190</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_14">
+        <item>
+         <widget class="QLineEdit" name="le_opt_mr"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>510</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
       </property>
      </widget>
     </widget>
@@ -355,31 +620,109 @@
      <attribute name="title">
       <string>Nozzle</string>
      </attribute>
+     <widget class="QPushButton" name="runMissionButton_2">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>510</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="feedTab">
      <attribute name="title">
       <string>Feed system</string>
      </attribute>
+     <widget class="QPushButton" name="runMissionButton_3">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>510</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="chamberTab">
      <attribute name="title">
       <string>Chamber</string>
      </attribute>
+     <widget class="QPushButton" name="runMissionButton_4">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>510</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Ignitor</string>
      </attribute>
+     <widget class="QPushButton" name="runMissionButton_5">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>510</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
       <string>Injector</string>
      </attribute>
+     <widget class="QPushButton" name="runMissionButton_6">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>510</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
       <string>Grain</string>
      </attribute>
+     <widget class="QPushButton" name="runMissionButton_7">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>510</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -429,7 +772,7 @@
   <customwidget>
    <class>MplWidget</class>
    <extends>QWidget</extends>
-   <header>mplwidget.py</header>
+   <header>mplwidget</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

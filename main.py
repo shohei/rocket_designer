@@ -15,7 +15,7 @@ def runButtonEvent(ui):
     if tabIndex == 0:
         mission.run(ui)
     elif tabIndex == 1:
-        pass
+        thermochemical.run(ui)
     elif tabIndex == 2:
         pass
     elif tabIndex == 3:
