@@ -4,6 +4,7 @@ from about_ui import Ui_AboutForm
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout, QShortcut, QMainWindow)
 from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
+from PyQt5.QtGui import QIcon
 import math
 import config
 from components import mission, thermochemical, nozzle, chamber, feed, injector, ignitor, grain
@@ -46,6 +47,9 @@ def setupMenu(ui, AboutForm):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    path = os.path.dirname(os.path.abspath(__file__))
+    icon = QIcon(os.path.join(path, './image/logo_100px.png'))
+    app.setWindowIcon(icon) 
     qdarktheme.setup_theme("light")
 
     #Init Main Window UI
