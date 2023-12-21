@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['main.py'],
+    ['RocketDesigner.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -20,7 +20,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='main',
+    name='RocketDesigner',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -31,7 +31,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['image/logo.png'],
+    icon=['image/logo_200px.png'],
 )
 coll = COLLECT(
     exe,
@@ -40,11 +40,11 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='main',
+    name='RocketDesigner',
 )
 app = BUNDLE(
     coll,
-    name='main.app',
-    icon='image/logo.png',
+    name='RocketDesigner.app',
+    icon='image/logo_200px.png',
     bundle_identifier=None,
 )

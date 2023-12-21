@@ -20,6 +20,10 @@ def runButtonEvent(ui):
     elif tabIndex == 3:
         chamber.run(ui)
     elif tabIndex == 4:
+        feed.run(ui)
+    elif tabIndex == 5:
+        pass
+    elif tabIndex == 6:
         pass
 
 def quitEvent(MainWindow):
