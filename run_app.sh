@@ -1,2 +1,2 @@
 #!/bin/sh
-python RocketDesigner.py
+python src/RocketDesigner.py

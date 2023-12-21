@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="missionTab">
      <attribute name="title">
@@ -1168,7 +1168,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>L* table figure</string>
+       <string>L star table</string>
+      </property>
+      <property name="pixmap">
+       <pixmap>:/newPrefix/image/Lstar.png</pixmap>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1479,7 +1482,7 @@
   <customwidget>
    <class>MplWidget</class>
    <extends>QWidget</extends>
-   <header>mplwidget</header>
+   <header>mplwidget.py</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

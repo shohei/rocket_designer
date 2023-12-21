@@ -1,3 +1,3 @@
 #/bin/sh
-pyuic5 -x rocket_designer.ui -o ui.py
-pyuic5 -x about.ui -o about_ui.py
+pyuic5 -x ui/rocket_designer.ui -o src/ui.py
+pyuic5 -x ui/about.ui -o src/about_ui.py

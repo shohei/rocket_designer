@@ -1,8 +1,6 @@
 #/bin/sh
+pyinstaller -y --windowed RocketDesigner.py --icon=image/logo_200px.png \
+  --add-data="image/logo_100px.png:image" --add-data="image/Lstar.png:image" \
+  --add-data="image/pid_ox.png:image" --add-data="image/pid_fuel.png:image"
 
-# 1) Use of pyinstaller: does not work
-pyinstaller --windowed RocketDesigner.py --icon=image/logo_200px.png
-
-# 2) Use of py2app: does not work
-#py2applet --make-setup main.py
-#python setup.py py2app
+cp /opt/homebrew/lib/python3.9/site-packages/rocketcea/_version.py dist/RocketDesigner.app/Contents/Resources/rocketcea/

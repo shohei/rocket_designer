@@ -20,7 +20,7 @@ def initVariables(ui):
 
 def loadImages(ui):
     path = os.path.dirname(os.path.abspath(__file__))
-    ui.lbl_lstar.setPixmap(QPixmap(os.path.join(path, '../image/Lstar.png')))
+    ui.lbl_lstar.setPixmap(QPixmap(os.path.join(path, './image/Lstar.png')))
 
 def initHandlers(ui):
     ui.runChamberButton.clicked.connect(lambda: run(ui))

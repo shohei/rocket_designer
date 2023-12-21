@@ -10,10 +10,10 @@ def initVariables(ui):
 
 def loadImages(ui):
     path = os.path.dirname(os.path.abspath(__file__))
-    ox_pid = QPixmap(os.path.join(path, '../image/pid_ox.png'))
+    ox_pid = QPixmap(os.path.join(path, './image/pid_ox.png'))
     ox_pid = ox_pid.scaled(ui.label_pid_ox.size(), QtCore.Qt.KeepAspectRatio)
     ui.label_pid_ox.setPixmap(ox_pid)
-    fuel_pid = QPixmap(os.path.join(path, '../image/pid_fuel.png'))
+    fuel_pid = QPixmap(os.path.join(path, './image/pid_fuel.png'))
     fuel_pid = fuel_pid.scaled(ui.label_pid_fuel.size(), QtCore.Qt.KeepAspectRatio)
     ui.label_pid_fuel.setPixmap(fuel_pid)
 

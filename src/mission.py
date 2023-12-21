@@ -4,7 +4,6 @@ from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
 import math
 import config
-from components import *
 
 def run(ui):
     g = config.g
