@@ -35,7 +35,7 @@ def setupShortcut(ui, MainWindow):
 
 def loadImages(ui_about):
     path = os.path.dirname(os.path.abspath(__file__))
-    ui_about.logo_label.setPixmap(QPixmap(os.path.join(path, './image/logo.jpg')))
+    ui_about.logo_label.setPixmap(QPixmap(os.path.join(path, './image/logo_100px.png')))
 
 def setupMenu(ui, AboutForm):
     ui.actionAbout.triggered.connect(lambda: AboutForm.show())
