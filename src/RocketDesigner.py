@@ -2,6 +2,7 @@ import os, sys
 from ui import Ui_RocketDesigner
 from about_ui import Ui_AboutForm 
 from cs_mission_ui import Ui_cs_mission_form
+from example_ui import Ui_expForm
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout, QShortcut, QMainWindow)
 from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
@@ -9,6 +10,8 @@ from PyQt5.QtGui import QIcon
 import math
 import config
 import mission, thermochemical, nozzle, chamber, feed, injector, ignitor, grain
+import example
+import cs_mission
 import qdarktheme
 
 def runButtonEvent(ui):
@@ -83,9 +86,17 @@ def loadImages(ui_about):
     path = os.path.dirname(os.path.abspath(__file__))
     ui_about.logo_label.setPixmap(QPixmap(os.path.join(path, './image/logo_100px.png')))
 
-def setupMenu(ui, AboutForm):
+def setupMenu(ui, AboutForm, expForm):
     ui.actionAbout.triggered.connect(lambda: AboutForm.show())
     ui.actionRun.triggered.connect(lambda: AllRun(ui))
+    ui.actionExamples.triggered.connect(lambda: expForm.show())
+
+def setupHandlers(ui):
+    ui.tabWidget.currentChanged.connect(lambda: tabSwitchedEvent(ui))
+
+def tabSwitchedEvent(ui):
+    # print(ui.tabWidget.currentIndex())
+    pass
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
@@ -112,11 +123,14 @@ if __name__ == "__main__":
     #Init Cheatsheet Mission UI
     cs_mission_form = QWidget()
     ui_cs_mission = Ui_cs_mission_form()
-    ui.setupUi(cs_mission_form)
-
-    ui_cs_mission = Ui_cs_mission_form()
     ui_cs_mission.setupUi(cs_mission_form)
+    cs_mission.initialize(ui_cs_mission)
     cs_mission_form.show()
+    #Init example UI
+    expForm = QWidget()
+    ui_exp = Ui_expForm()
+    ui_exp.setupUi(expForm)
+    example.initialize(ui, ui_exp)
 
     mission.initialize(ui) 
     thermochemical.initialize(ui)
@@ -127,8 +141,9 @@ if __name__ == "__main__":
     injector.initialize(ui)
     grain.initialize(ui)
 
+    setupHandlers(ui)
     setupShortcut(ui, RocketDesigner)
-    setupMenu(ui, AboutForm)
+    setupMenu(ui, AboutForm, expForm)
 
     RocketDesigner.show()    
     sys.exit(app.exec_())
