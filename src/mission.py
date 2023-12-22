@@ -53,14 +53,12 @@ def loadImages(ui):
     ui.label.setPixmap(QPixmap(os.path.join(path, '../image/h3.jpg')))
 
 def switchToSolid(ui):
-    ui.rb_solid.setChecked(True)
     ui.gb_solid_input.setEnabled(True)
     ui.gb_solid_output.setEnabled(True)
     ui.gb_liquid_input.setEnabled(False)
     ui.gb_liquid_output.setEnabled(False)
 
 def switchToLiquid(ui):
-    ui.rb_liquid.setChecked(True)
     ui.gb_solid_input.setEnabled(False)
     ui.gb_solid_output.setEnabled(False)
     ui.gb_liquid_input.setEnabled(True)
@@ -71,6 +69,7 @@ def setupHandlers(ui):
     ui.rb_liquid.clicked.connect(lambda: switchToLiquid(ui))
 
 def initialize(ui):
+    ui.rb_solid.setChecked(True)
     switchToSolid(ui)
     setupHandlers(ui)
     setupValidators(ui)

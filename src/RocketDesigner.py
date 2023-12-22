@@ -1,18 +1,21 @@
 import os, sys
 from ui import Ui_RocketDesigner
 from about_ui import Ui_AboutForm 
-from cs_mission_ui import Ui_cs_mission_form
+from cs_ui import Ui_cs_form 
 from example_ui import Ui_expForm
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout, QShortcut, QMainWindow)
 from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
 from PyQt5.QtGui import QIcon
+from PyQt5 import QtWebEngineWidgets
+from PyQt5.QtCore import QUrl
 import math
 import config
 import mission, thermochemical, nozzle, chamber, feed, injector, ignitor, grain
 import example
-import cs_mission
+import cheatsheet 
 import qdarktheme
+import pdb
 
 def runButtonEvent(ui):
     AllRun(ui)
@@ -74,13 +77,16 @@ def UpdateGrainVariables(ui):
 def quitEvent(MainWindow):
     MainWindow.close()
 
-def setupShortcut(ui, MainWindow):
+def setupShortcut(ui, MainWindow, ui_cs, cs_form):
     shortcutRun = QKeySequence(Qt.CTRL + Qt.Key_R)
     ui.shortcut = QShortcut(shortcutRun, ui.tabWidget)
     shortcutQuit = QKeySequence(Qt.CTRL + Qt.Key_W)
     ui.shortcut2 = QShortcut(shortcutQuit, ui.tabWidget)
+    shortcutCS = QKeySequence(Qt.CTRL + Qt.Key_I)
+    ui.shortcut3 = QShortcut(shortcutCS, ui.tabWidget)
     ui.shortcut.activated.connect(lambda: runButtonEvent(ui))
     ui.shortcut2.activated.connect(lambda: quitEvent(MainWindow))
+    ui.shortcut3.activated.connect(lambda: cheatsheet.show(ui, ui_cs, cs_form))
 
 def loadImages(ui_about):
     path = os.path.dirname(os.path.abspath(__file__))
@@ -114,18 +120,18 @@ if __name__ == "__main__":
     menu = ui.menuBar
     menu.setNativeMenuBar(False)
 
-    #Init About Form UI
+    #Init About UI
     ui_about = Ui_AboutForm()
     AboutForm = QWidget()
     ui_about.setupUi(AboutForm)
     loadImages(ui_about)
 
     #Init Cheatsheet Mission UI
-    cs_mission_form = QWidget()
-    ui_cs_mission = Ui_cs_mission_form()
-    ui_cs_mission.setupUi(cs_mission_form)
-    cs_mission.initialize(ui_cs_mission)
-    cs_mission_form.show()
+    cs_form = QWidget()
+    ui_cs = Ui_cs_form()
+    ui_cs.setupUi(cs_form)
+    cheatsheet.initialize(ui, ui_cs, cs_form)
+
     #Init example UI
     expForm = QWidget()
     ui_exp = Ui_expForm()
@@ -142,7 +148,7 @@ if __name__ == "__main__":
     grain.initialize(ui)
 
     setupHandlers(ui)
-    setupShortcut(ui, RocketDesigner)
+    setupShortcut(ui, RocketDesigner, ui_cs, cs_form)
     setupMenu(ui, AboutForm, expForm)
 
     RocketDesigner.show()    
