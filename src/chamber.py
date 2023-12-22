@@ -18,11 +18,6 @@ def initVariables(ui):
     ui.le_lstar.setText('100.0')
     ui.le_at_2.setText(ui.le_at.text())
 
-def loadImages(ui):
-    path = os.path.dirname(os.path.abspath(__file__))
-    ui.lbl_lstar.setPixmap(QPixmap(os.path.join(path, './image/Lstar.png')))
-
 def initialize(ui):
-    loadImages(ui)
     initVariables(ui)
     run(ui)
