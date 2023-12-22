@@ -11,21 +11,61 @@ import mission, thermochemical, nozzle, chamber, feed, injector, ignitor, grain
 import qdarktheme
 
 def runButtonEvent(ui):
-    tabIndex = ui.tabWidget.currentIndex()
-    if tabIndex == 0:
-        mission.run(ui)
-    elif tabIndex == 1:
-        thermochemical.run(ui)
-    elif tabIndex == 2:
-        nozzle.run(ui)
-    elif tabIndex == 3:
-        chamber.run(ui)
-    elif tabIndex == 4:
-        feed.run(ui)
-    elif tabIndex == 5:
-        pass
-    elif tabIndex == 6:
-        pass
+    AllRun(ui)
+    # tabIndex = ui.tabWidget.currentIndex()
+    # if tabIndex == 0:
+    #     mission.run(ui)
+    # elif tabIndex == 1:
+    #     thermochemical.run(ui)
+    # elif tabIndex == 2:
+    #     nozzle.run(ui)
+    # elif tabIndex == 3:
+    #     chamber.run(ui)
+    # elif tabIndex == 4:
+    #     feed.run(ui)
+    # elif tabIndex == 5:
+    #     pass
+    # elif tabIndex == 6:
+    #     pass
+
+def AllRun(ui):
+    mission.run(ui)
+    UpdateThermoVariables(ui)
+    thermochemical.run(ui)
+    UpdateNozzleVariables(ui)
+    nozzle.run(ui)
+    UpdateChamberVariables(ui)
+    chamber.run(ui)
+    UpdateFeedVariables(ui)
+    feed.run(ui)
+    UpdateIgnitorVariables(ui)
+    ignitor.run(ui)
+    UpdateInjectorVariables(ui)
+    injector.run(ui)
+    UpdateGrainVariables(ui)
+    grain.run(ui)
+
+def UpdateThermoVariables(ui):
+    pass
+
+def UpdateNozzleVariables(ui):
+    ui.le_pc_2.setText(ui.le_pc.text())
+    ui.le_aft_2.setText(ui.le_aft.text())
+    ui.le_gamma_2.setText(ui.le_gamma.text())
+    ui.le_mdot_2.setText(ui.le_mdot.text())
+    ui.le_M_2.setText(ui.le_M.text())      
+
+def UpdateChamberVariables(ui):
+    ui.le_at_2.setText(ui.le_at.text())
+
+def UpdateFeedVariables(ui):
+    pass
+def UpdateIgnitorVariables(ui):
+    pass
+def UpdateInjectorVariables(ui):
+    pass
+def UpdateGrainVariables(ui):
+    pass
 
 def quitEvent(MainWindow):
     MainWindow.close()
@@ -44,6 +84,7 @@ def loadImages(ui_about):
 
 def setupMenu(ui, AboutForm):
     ui.actionAbout.triggered.connect(lambda: AboutForm.show())
+    ui.actionRun.triggered.connect(lambda: AllRun(ui))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

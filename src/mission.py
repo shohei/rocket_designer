@@ -26,7 +26,6 @@ def run(ui):
     ui.le_mdot.setText("{:.2f}".format((mass_flow_rate)))
 
 def setupHandlers(ui):
-    ui.runMissionButton.clicked.connect(lambda: run(ui))
     ui.nakuja_n3_button.clicked.connect(lambda: initializeNakujaN3parameters(ui))
     ui.usc_traveler4_button.clicked.connect(lambda: initializeUSCTraveler4parameters(ui))
     ui.jaxa_ss520_button.clicked.connect(lambda: initializeJAXASS520parameters(ui))
