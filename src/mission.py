@@ -52,7 +52,27 @@ def loadImages(ui):
     path = os.path.dirname(os.path.abspath(__file__))
     ui.label.setPixmap(QPixmap(os.path.join(path, '../image/h3.jpg')))
 
+def switchToSolid(ui):
+    ui.rb_solid.setChecked(True)
+    ui.gb_solid_input.setEnabled(True)
+    ui.gb_solid_output.setEnabled(True)
+    ui.gb_liquid_input.setEnabled(False)
+    ui.gb_liquid_output.setEnabled(False)
+
+def switchToLiquid(ui):
+    ui.rb_liquid.setChecked(True)
+    ui.gb_solid_input.setEnabled(False)
+    ui.gb_solid_output.setEnabled(False)
+    ui.gb_liquid_input.setEnabled(True)
+    ui.gb_liquid_output.setEnabled(True)
+
+def setupHandlers(ui):
+    ui.rb_solid.clicked.connect(lambda: switchToSolid(ui))
+    ui.rb_liquid.clicked.connect(lambda: switchToLiquid(ui))
+
 def initialize(ui):
+    switchToSolid(ui)
+    setupHandlers(ui)
     setupValidators(ui)
     # loadImages(ui)
     example.updateNakujaN3parameters(ui)
