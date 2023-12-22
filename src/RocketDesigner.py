@@ -1,6 +1,7 @@
 import os, sys
 from ui import Ui_RocketDesigner
 from about_ui import Ui_AboutForm 
+from cs_mission_ui import Ui_cs_mission_form
 from PyQt5.QtWidgets import (QApplication, QWidget, QSlider, QLCDNumber, QVBoxLayout, QShortcut, QMainWindow)
 from PyQt5.QtCore import Qt,QRegExp
 from PyQt5.QtGui import QRegExpValidator, QKeySequence, QPixmap
@@ -107,6 +108,15 @@ if __name__ == "__main__":
     AboutForm = QWidget()
     ui_about.setupUi(AboutForm)
     loadImages(ui_about)
+
+    #Init Cheatsheet Mission UI
+    cs_mission_form = QWidget()
+    ui_cs_mission = Ui_cs_mission_form()
+    ui.setupUi(cs_mission_form)
+
+    ui_cs_mission = Ui_cs_mission_form()
+    ui_cs_mission.setupUi(cs_mission_form)
+    cs_mission_form.show()
 
     mission.initialize(ui) 
     thermochemical.initialize(ui)

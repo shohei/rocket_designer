@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>828</width>
-    <height>657</height>
+    <width>825</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="missionTab">
      <attribute name="title">
@@ -37,9 +37,9 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>40</y>
+        <y>80</y>
         <width>321</width>
-        <height>181</height>
+        <height>211</height>
        </rect>
       </property>
       <property name="autoFillBackground">
@@ -51,10 +51,10 @@
       <widget class="QWidget" name="verticalLayoutWidget_3">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>12</x>
          <y>30</y>
          <width>131</width>
-         <height>131</height>
+         <height>171</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -84,10 +84,13 @@
         <item>
          <widget class="QLabel" name="label_11">
           <property name="text">
-           <string>Initial mass [kg]</string>
+           <string>Initial rocket mass [kg]</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -109,7 +112,7 @@
          <x>150</x>
          <y>30</y>
          <width>160</width>
-         <height>131</height>
+         <height>171</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -132,7 +135,7 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>250</y>
+        <y>310</y>
         <width>331</width>
         <height>271</height>
        </rect>
@@ -265,93 +268,272 @@
      <widget class="QGroupBox" name="groupBox_3">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>40</y>
-        <width>161</width>
-        <height>201</height>
+        <x>102</x>
+        <y>18</y>
+        <width>661</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="title">
-       <string>Solid propellant rocket</string>
+       <string>Design type</string>
       </property>
-      <widget class="QWidget" name="verticalLayoutWidget_5">
+      <widget class="QRadioButton" name="radioButton">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>6</x>
          <y>30</y>
-         <width>138</width>
-         <height>161</height>
+         <width>170</width>
+         <height>20</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_5">
-        <item>
-         <widget class="QPushButton" name="nakuja_n3_button">
-          <property name="text">
-           <string>Nakuja N3</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="usc_traveler4_button">
-          <property name="text">
-           <string>USC Traveler IV</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="jaxa_ss520_button">
-          <property name="text">
-           <string>JAXA SS-520</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <property name="text">
+        <string>Solid propellant rocket</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>30</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Liquid propellant rocket engine</string>
+       </property>
       </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_4">
       <property name="geometry">
        <rect>
-        <x>630</x>
-        <y>40</y>
-        <width>171</width>
-        <height>201</height>
+        <x>440</x>
+        <y>80</y>
+        <width>321</width>
+        <height>211</height>
        </rect>
       </property>
-      <property name="title">
-       <string>Liquid propellant rocket</string>
+      <property name="autoFillBackground">
+       <bool>false</bool>
       </property>
-      <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="title">
+       <string>Input</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_5">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>12</x>
          <y>30</y>
-         <width>148</width>
-         <height>161</height>
+         <width>131</width>
+         <height>171</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
-         <widget class="QPushButton" name="nakuja_liquid1_button">
+         <widget class="QLabel" name="label_38">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
           <property name="text">
-           <string>Nakuja Liquid-1</string>
+           <string>Avg. Thrust [kN]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="jaxa_h3_button">
+         <widget class="QLabel" name="label_48">
           <property name="text">
-           <string>JAXA H3</string>
+           <string>Burn time [s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="spacex_falcon9_button">
+         <widget class="QLabel" name="label_51">
           <property name="text">
-           <string>Space X Falcon 9</string>
+           <string>Initial rocket mass [kg]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_52">
+          <property name="text">
+           <string>Mass ratio</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_60">
+          <property name="text">
+           <string>Isp [s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_6">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>160</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QLineEdit" name="le_apogee_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_isp_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_m0_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_burntime_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_burntime_3"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_13">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>310</y>
+        <width>331</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_29">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>30</y>
+         <width>160</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_29">
+        <item>
+         <widget class="QLineEdit" name="le_deltav_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_impulse_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_mr_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_mp_2"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="le_mdot_3"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_30">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>141</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_30">
+        <item>
+         <widget class="QLabel" name="label_53">
+          <property name="text">
+           <string>ΔV [m/s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_54">
+          <property name="text">
+           <string>Total impulse I [kN•s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_55">
+          <property name="text">
+           <string>Apogee [km]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_56">
+          <property name="text">
+           <string>Propellant mass [kg]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_58">
+          <property name="text">
+           <string>Propellant mass flow rate [kg/s]</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="label_59">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>270</y>
+         <width>159</width>
+         <height>37</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Avg. Thrust [kN]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
       </widget>
      </widget>
     </widget>
@@ -898,7 +1080,7 @@
         <rect>
          <x>30</x>
          <y>30</y>
-         <width>161</width>
+         <width>171</width>
          <height>171</height>
         </rect>
        </property>
@@ -946,9 +1128,6 @@
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -1458,7 +1637,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>828</width>
+     <width>825</width>
      <height>24</height>
     </rect>
    </property>
