@@ -763,11 +763,14 @@ class Ui_RocketDesigner(object):
         self.actionRun.setObjectName("actionRun")
         self.actionExamples = QtWidgets.QAction(RocketDesigner)
         self.actionExamples.setObjectName("actionExamples")
+        self.actionCheatsheet = QtWidgets.QAction(RocketDesigner)
+        self.actionCheatsheet.setObjectName("actionCheatsheet")
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
         self.menuFile.addAction(self.actionExamples)
         self.menuHelp.addAction(self.actionAbout)
         self.menuTools.addAction(self.actionRun)
+        self.menuTools.addAction(self.actionCheatsheet)
         self.menuBar.addAction(self.menuFile.menuAction())
         self.menuBar.addAction(self.menuTools.menuAction())
         self.menuBar.addAction(self.menuHelp.menuAction())
@@ -885,6 +888,7 @@ class Ui_RocketDesigner(object):
         self.actionSave.setText(_translate("RocketDesigner", "Save (Ctrl-S)"))
         self.actionRun.setText(_translate("RocketDesigner", "Run (Ctrl-R)"))
         self.actionExamples.setText(_translate("RocketDesigner", "Examples"))
+        self.actionCheatsheet.setText(_translate("RocketDesigner", "Cheatsheet (Ctrl-I)"))
 from mplwidget import MplWidget
 
 

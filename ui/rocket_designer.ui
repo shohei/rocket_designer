@@ -1660,6 +1660,7 @@
      <string>Tools</string>
     </property>
     <addaction name="actionRun"/>
+    <addaction name="actionCheatsheet"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuTools"/>
@@ -1688,6 +1689,11 @@
   <action name="actionExamples">
    <property name="text">
     <string>Examples</string>
+   </property>
+  </action>
+  <action name="actionCheatsheet">
+   <property name="text">
+    <string>Cheatsheet (Ctrl-I)</string>
    </property>
   </action>
  </widget>

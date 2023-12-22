@@ -74,28 +74,33 @@ def UpdateInjectorVariables(ui):
 def UpdateGrainVariables(ui):
     pass
 
-def quitEvent(MainWindow):
-    MainWindow.close()
+def quitEvent(window):
+    window.close()
 
 def setupShortcut(ui, MainWindow, ui_cs, cs_form):
     shortcutRun = QKeySequence(Qt.CTRL + Qt.Key_R)
-    ui.shortcut = QShortcut(shortcutRun, ui.tabWidget)
     shortcutQuit = QKeySequence(Qt.CTRL + Qt.Key_W)
-    ui.shortcut2 = QShortcut(shortcutQuit, ui.tabWidget)
     shortcutCS = QKeySequence(Qt.CTRL + Qt.Key_I)
+
+    ui.shortcut = QShortcut(shortcutRun, ui.tabWidget)
+    ui.shortcut2 = QShortcut(shortcutQuit, ui.tabWidget)
     ui.shortcut3 = QShortcut(shortcutCS, ui.tabWidget)
+    ui_cs.shortcut4 = QShortcut(shortcutQuit, ui_cs.webViewWidget)
+
     ui.shortcut.activated.connect(lambda: runButtonEvent(ui))
     ui.shortcut2.activated.connect(lambda: quitEvent(MainWindow))
     ui.shortcut3.activated.connect(lambda: cheatsheet.show(ui, ui_cs, cs_form))
+    ui_cs.shortcut4.activated.connect(lambda: quitEvent(cs_form))
 
 def loadImages(ui_about):
     path = os.path.dirname(os.path.abspath(__file__))
     ui_about.logo_label.setPixmap(QPixmap(os.path.join(path, './image/logo_100px.png')))
 
-def setupMenu(ui, AboutForm, expForm):
+def setupMenu(ui, ui_cs, AboutForm, expForm, cs_form):
     ui.actionAbout.triggered.connect(lambda: AboutForm.show())
     ui.actionRun.triggered.connect(lambda: AllRun(ui))
     ui.actionExamples.triggered.connect(lambda: expForm.show())
+    ui.actionCheatsheet.triggered.connect(lambda: cheatsheet.show(ui, ui_cs, cs_form))
 
 def setupHandlers(ui):
     ui.tabWidget.currentChanged.connect(lambda: tabSwitchedEvent(ui))
@@ -149,7 +154,7 @@ if __name__ == "__main__":
 
     setupHandlers(ui)
     setupShortcut(ui, RocketDesigner, ui_cs, cs_form)
-    setupMenu(ui, AboutForm, expForm)
+    setupMenu(ui, ui_cs, AboutForm, expForm, cs_form)
 
     RocketDesigner.show()    
     sys.exit(app.exec_())
