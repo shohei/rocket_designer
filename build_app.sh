@@ -5,7 +5,8 @@ pyinstaller -y --windowed src/RocketDesigner.py --icon=src/image/logo_200px.png 
   --add-data="src/doc/mission.html:doc" --add-data="src/doc/thermochemical.html:doc" \
   --add-data="src/doc/nozzle.html:doc" --add-data="src/doc/chamber.html:doc" \
   --add-data="src/doc/feed.html:doc" --add-data="src/doc/ignitor.html:doc" \
-  --add-data="src/doc/injector.html:doc" --add-data="src/doc/grain.html:doc" 
+  --add-data="src/doc/feed.html:doc" --add-data="src/doc/injector.html:doc" \
+  --add-data="src/doc/ignitor.html:doc" --add-data="src/doc/grain.html:doc"
 
 function get_site_package_path(){
   python -c 'import site; print(site.getsitepackages()[0])'
